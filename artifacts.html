@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artifacts — Sai Kuruguntla</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="brand">Sai Kuruguntla</a>
+  <div class="links">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="artifacts.html" class="nav-link active">Artifacts</a>
+  </div>
+</nav>
+
+<main>
+  <div class="section-label">Artifacts</div>
+  <h2 class="section-title">Artifact 1</h2>
+
+  <div class="card">
+    <span class="tag">AI Lab</span><span class="tag">Design Thinking</span>
+    <h3 style="margin-top:6px; font-size:1.35rem;">Vendor Security Questionnaire Generator: An AI-Built Compliance Tool</h3>
+
+    <p><strong>Introduction.</strong> As part of the AIML-500 AI Lab, I designed and built an interactive AI tool that generates vendor security due-diligence questions grounded in real compliance frameworks (SOC 2, ISO 27001, HIPAA). The project combined my background in security engineering with a structured design-thinking process to build something a security or GRC team could actually use.</p>
+
+    <p><strong>Description.</strong> The tool walks a user through four steps — how many questions they want (5–15), which compliance framework to assess against, which security domain to focus on (e.g., network security, access control, incident response), and an optional paste of an existing vendor document — before generating specific, citation-backed questions to send to a vendor during a security review.</p>
+
+    <h3>The Tool in Action</h3>
+
+    <div class="device-frame">
+      <div class="bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="toolbar-title">Vendor Security Questionnaire Generator</span>
+      </div>
+      <div class="content">
+        <div class="mock-card">
+          <div class="mock-progress"><span></span><span></span><span></span><span></span></div>
+          <div class="mock-title">Hi — let's build your vendor security questionnaire.</div>
+          <div class="mock-sub">Tell me a few things and I'll generate specific, framework-grounded questions you can send to a vendor during a security review — no invented controls, no assumptions about their environment.</div>
+          <a class="mock-btn">Get started</a>
+        </div>
+      </div>
+      <div class="mock-caption">Landing screen — sets expectations before any input is collected.</div>
+    </div>
+
+    <div class="device-frame">
+      <div class="bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="toolbar-title">Vendor Security Questionnaire Generator</span>
+      </div>
+      <div class="content">
+        <div class="mock-card">
+          <div class="mock-progress"><span class="filled"></span><span class="filled"></span><span></span><span></span></div>
+          <div class="mock-step-tag">STEP 2 OF 4</div>
+          <div class="mock-title">Which framework are you assessing readiness against?</div>
+          <div class="mock-option"><strong>SOC 2</strong><span class="desc">Trust Service Criteria: security, availability, confidentiality, etc.</span></div>
+          <div class="mock-option"><strong>ISO 27001</strong><span class="desc">Annex A control set for information security management</span></div>
+          <div class="mock-option selected"><strong>HIPAA</strong><span class="desc">Security Rule safeguards for protected health information</span></div>
+        </div>
+      </div>
+      <div class="mock-caption">Step 2 of 4 — framework picker. HIPAA selected for the test scenario.</div>
+    </div>
+
+    <div class="device-frame">
+      <div class="bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="toolbar-title">Vendor Security Questionnaire Generator</span>
+      </div>
+      <div class="content">
+        <div class="mock-card">
+          <div class="mock-tags"><span>HIPAA</span><span>Incident Response</span><span>5 questions</span></div>
+          <div class="mock-title" style="margin-bottom:12px;">Your vendor security questions</div>
+          <div class="mock-question"><span class="mock-qnum">1</span><span>What documented incident response procedures does your organization have that specify roles, responsibilities, and timelines for detecting, responding to, and mitigating suspected or confirmed security incidents involving unsecured PHI, as required by 45 CFR § 164.308(a)(6)?</span></div>
+          <div class="mock-question"><span class="mock-qnum">2</span><span>How does your organization ensure that individuals affected by a breach of unsecured PHI are notified without unreasonable delay and within 60 calendar days of discovery, as specified in 45 CFR § 164.404(b)?</span></div>
+          <div class="mock-question"><span class="mock-qnum">3</span><span>What procedures does your organization follow to investigate security incidents, document investigation findings, and track remediation actions, consistent with 45 CFR § 164.308(a)(6)?</span></div>
+          <div class="mock-question"><span class="mock-qnum">4</span><span>What contingency planning and business continuity procedures does your organization maintain to restore critical operations and protect PHI following a security incident, as required by 45 CFR § 164.308(a)(7)?</span></div>
+          <div class="mock-question"><span class="mock-qnum">5</span><span>What is your organization's process for determining whether a breach requires notification to the HHS Secretary, and how do you ensure timely reporting for breaches affecting 500+ individuals per 45 CFR § 164.408?</span></div>
+        </div>
+      </div>
+      <div class="mock-caption">Results screen from the test scenario — all five questions cite real HIPAA Security Rule safeguards.</div>
+    </div>
+
+    <h3>Objective</h3>
+    <p>The objective was twofold: practice the full design-thinking cycle (Empathy → Problem → Ideation → Prototype → Test) on a real build rather than a hypothetical, and produce a tool that solves an actual problem I encounter as a security engineer — vendor questionnaires that are often generic or invent requirements that don't exist in the actual framework.</p>
+
+    <h3>Process</h3>
+    <p>Before writing a single line of the bot, I answered ten planning questions covering its objective, knowledge boundaries, and guardrails. Key constraints I set:</p>
+    <ul>
+      <li>Only use real framework language — SOC 2 Trust Service Criteria, ISO 27001 Annex A, or the HIPAA Security Rule — never invented controls.</li>
+      <li>Never assume facts about a specific vendor's environment, and never imply a compliance verdict.</li>
+      <li>Guide the user through multiple-choice steps rather than a free-form chat.</li>
+    </ul>
+    <p>I deliberately deviated from the lab's suggested no-code builders (Chatbase, Mizou, ChatGPT's custom GPT builder) and built the tool directly with Claude inside Cowork instead, since it needed to call a live LLM to generate real questions at request time rather than return canned text. Because Claude was the build tool, I reviewed Anthropic's Consumer Terms and Privacy Policy in place of a no-code platform's terms of service.</p>
+    <p><strong>Test scenario:</strong> HIPAA framework, "Incident Response" focus, 5 questions requested. The bot returned five questions, each tied to a real, correctly cited HIPAA Security Rule safeguard (45 CFR §164.308(a)(6), §164.404(b), §164.308(a)(7), §164.408) — with no invented controls and no compliance verdict, meeting the success criteria defined during planning.</p>
+
+    <h3>Tools and Technologies Used</h3>
+    <ul>
+      <li>Claude (built and hosted as an interactive Cowork artifact, calling a live LLM at runtime)</li>
+      <li>Design-thinking framework (Empathy → Problem → Ideation → Prototype → Test)</li>
+      <li>HIPAA Security Rule, SOC 2 Trust Service Criteria, ISO 27001 Annex A — as grounding sources</li>
+      <li>Anthropic Consumer Terms of Service and Privacy Policy (reviewed as part of the build process)</li>
+    </ul>
+
+    <h3>Value Proposition</h3>
+    <p>This artifact shows I can translate regulatory and compliance frameworks into a working, guardrailed AI tool — not just describe security requirements, but build something that enforces them by design.</p>
+
+    <h3>Unique Value</h3>
+    <p>Unlike a scripted chatbot built on canned responses, this tool calls a live model at runtime and was explicitly constrained during design — no invented controls, no assumptions about a vendor's environment, no compliance verdicts — and validated against a real regulatory citation before calling it done.</p>
+
+    <h3>Relevance</h3>
+    <p>For an audience evaluating AI/ML and security talent, this artifact is directly relevant: it shows structured problem-solving, current tool fluency, and enough domain knowledge to catch where an AI tool could go wrong and design against it.</p>
+
+    <h3>References</h3>
+    <ul>
+      <li>HIPAA Security Rule — 45 CFR §164.308(a)(6), §164.404(b), §164.308(a)(7), §164.408</li>
+      <li>SOC 2 Trust Service Criteria (AICPA)</li>
+      <li>ISO/IEC 27001 Annex A control set</li>
+      <li>Anthropic Consumer Terms of Service and Privacy Policy</li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site-footer">Sai Kuruguntla · IWU AIML-501 Professional Portfolio</footer>
+
+</body>
+</html>
