@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sai Kuruguntla — Professional Portfolio</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #1f2430;
+    background: #fbfbfd;
+    line-height: 1.6;
+  }
+  header {
+    background: #10213f;
+    color: #fff;
+    padding: 48px 24px 36px;
+    text-align: center;
+  }
+  header h1 { font-size: 2rem; font-weight: 700; }
+  header p { margin-top: 8px; color: #b7c2d9; font-size: 1.05rem; }
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: #ffffff;
+    border-bottom: 1px solid #e3e6ec;
+    display: flex; justify-content: center; gap: 28px;
+    padding: 14px 12px;
+  }
+  nav a {
+    color: #10213f; text-decoration: none; font-weight: 600; font-size: 0.95rem;
+  }
+  nav a:hover { color: #2f5fd6; }
+  main { max-width: 780px; margin: 0 auto; padding: 48px 24px 80px; }
+  section { margin-bottom: 56px; }
+  h2 {
+    font-size: 1.5rem; color: #10213f; margin-bottom: 16px;
+    border-bottom: 3px solid #2f5fd6; display: inline-block; padding-bottom: 4px;
+  }
+  h3 { font-size: 1.15rem; color: #10213f; margin: 20px 0 8px; }
+  p { margin-bottom: 12px; color: #333a47; }
+  ul { margin: 0 0 12px 22px; color: #333a47; }
+  li { margin-bottom: 6px; }
+  .editable {
+    background: #fff7e0; border-left: 4px solid #e6a817;
+    padding: 12px 16px; border-radius: 4px; font-size: 0.9rem; color: #6b5417;
+    margin-bottom: 16px;
+  }
+  .card {
+    background: #fff; border: 1px solid #e3e6ec; border-radius: 10px;
+    padding: 28px 28px 24px; box-shadow: 0 1px 3px rgba(16,33,63,0.06);
+  }
+  .tag {
+    display: inline-block; background: #eaf0ff; color: #2f5fd6;
+    font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 999px;
+    margin-right: 6px; margin-bottom: 12px; letter-spacing: 0.03em;
+  }
+  .cta {
+    display: inline-block; background: #2f5fd6; color: #fff; text-decoration: none;
+    font-weight: 600; padding: 10px 20px; border-radius: 6px; margin-top: 8px;
+  }
+  .cta:hover { background: #234ab0; }
+  .placeholder-link { color: #b23; font-style: italic; font-size: 0.85rem; }
+  .shot-note {
+    border: 1px dashed #c7cede; border-radius: 6px; padding: 10px 14px;
+    color: #6b7280; font-size: 0.85rem; font-style: italic; margin: 10px 0 18px;
+  }
+  footer {
+    text-align: center; color: #8b93a3; font-size: 0.8rem; padding: 24px; border-top: 1px solid #e3e6ec;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Sai Kuruguntla</h1>
+  <p>Security Engineer · AI/ML Professional Portfolio (AIML-501)</p>
+</header>
+
+<nav>
+  <a href="#bio">Bio</a>
+  <a href="#value">Value Proposition</a>
+  <a href="#artifacts">Artifacts</a>
+</nav>
+
+<main>
+
+  <section id="bio">
+    <h2>Professional Bio</h2>
+    <div class="editable">Draft — personalize freely before sharing with your instructor.</div>
+    <p>I'm a security engineer with hands-on experience evaluating vendor risk, access control, and compliance requirements across frameworks like SOC 2, ISO 27001, and HIPAA. I'm currently building on that foundation in IWU's AIML program, where I'm learning to apply AI and machine learning directly to the security and GRC problems I work on day to day — not just as a user of AI tools, but as someone who designs and builds with them.</p>
+    <p>What draws me to this intersection is practical: security and compliance work is full of repetitive, judgment-heavy tasks — like drafting vendor questionnaires — that are perfect candidates for AI assistance, provided the tool is built with the right guardrails. This portfolio documents that growing skill set as I work through the AIML program.</p>
+  </section>
+
+  <section id="value">
+    <h2>Personal Value Proposition</h2>
+    <div class="editable">Draft — personalize freely before sharing with your instructor.</div>
+    <p>I bring a rare combination for AI/ML work in security: real domain expertise in security engineering and compliance, paired with the ability to actually build AI-powered tools rather than only prompt existing ones. I know where AI tools tend to fail in this space — inventing controls, assuming facts about an environment, overstepping into judgment calls that should stay with a human — and I design against those failure modes from the start. That combination of domain judgment and hands-on build capability is what I aim to bring to any team working at the intersection of AI and security.</p>
+  </section>
+
+  <section id="artifacts">
+    <h2>Artifacts</h2>
+
+    <div class="card">
+      <span class="tag">ARTIFACT 1</span><span class="tag">AI LAB</span>
+      <h3 style="margin-top:4px;">Vendor Security Questionnaire Generator: An AI-Built Compliance Tool</h3>
+
+      <p><strong>Introduction.</strong> As part of the AIML-500 AI Lab, I designed and built an interactive AI tool that generates vendor security due-diligence questions grounded in real compliance frameworks (SOC 2, ISO 27001, HIPAA). The project combined my background in security engineering with a structured design-thinking process to build something a security or GRC team could actually use.</p>
+
+      <p><strong>Description.</strong> The tool walks a user through four steps — how many questions they want (5–15), which compliance framework to assess against, which security domain to focus on (e.g., network security, access control, incident response), and an optional paste of an existing vendor document — before generating specific, citation-backed questions to send to a vendor during a security review.</p>
+
+      <div class="shot-note">Live, interactive tool — open it below to try the full flow yourself (question count → framework → focus area → generated questions).</div>
+      <a class="cta" href="#" id="live-tool-link">Open the live tool →</a>
+      <p class="placeholder-link">[Paste your bot's Cowork Share link here — replace the href="#" above]</p>
+
+      <h3>Objective</h3>
+      <p>The objective was twofold: practice the full design-thinking cycle (Empathy → Problem → Ideation → Prototype → Test) on a real build rather than a hypothetical, and produce a tool that solves an actual problem I encounter as a security engineer — vendor questionnaires that are often generic or invent requirements that don't exist in the actual framework.</p>
+
+      <h3>Process</h3>
+      <p>Before writing a single line of the bot, I answered ten planning questions covering its objective, knowledge boundaries, and guardrails. Key constraints I set:</p>
+      <ul>
+        <li>Only use real framework language — SOC 2 Trust Service Criteria, ISO 27001 Annex A, or the HIPAA Security Rule — never invented controls.</li>
+        <li>Never assume facts about a specific vendor's environment, and never imply a compliance verdict.</li>
+        <li>Guide the user through multiple-choice steps rather than a free-form chat.</li>
+      </ul>
+      <p>I deliberately deviated from the lab's suggested no-code builders (Chatbase, Mizou, ChatGPT's custom GPT builder) and built the tool directly with Claude inside Cowork instead, since it needed to call a live LLM to generate real questions at request time rather than return canned text. Because Claude was the build tool, I reviewed Anthropic's Consumer Terms and Privacy Policy in place of a no-code platform's terms of service.</p>
+      <p><strong>Test scenario:</strong> HIPAA framework, "Incident Response" focus, 5 questions requested. The bot returned five questions, each tied to a real, correctly cited HIPAA Security Rule safeguard (45 CFR §164.308(a)(6), §164.404(b), §164.308(a)(7), §164.408) — with no invented controls and no compliance verdict, meeting the success criteria defined during planning.</p>
+
+      <h3>Tools and Technologies Used</h3>
+      <ul>
+        <li>Claude (built and hosted as an interactive Cowork artifact, calling a live LLM at runtime)</li>
+        <li>Design-thinking framework (Empathy → Problem → Ideation → Prototype → Test)</li>
+        <li>HIPAA Security Rule, SOC 2 Trust Service Criteria, ISO 27001 Annex A — as grounding sources</li>
+      </ul>
+
+      <h3>Value Proposition</h3>
+      <p>This artifact shows I can translate regulatory and compliance frameworks into a working, guardrailed AI tool — not just describe security requirements, but build something that enforces them by design.</p>
+
+      <h3>Unique Value</h3>
+      <p>Unlike a scripted chatbot built on canned responses, this tool calls a live model at runtime and was explicitly constrained during design — validated against a real regulatory citation before calling it done.</p>
+
+      <h3>Relevance</h3>
+      <p>For an audience evaluating AI/ML and security talent, this shows structured problem-solving, current tool fluency, and enough domain knowledge to catch where an AI tool could go wrong — and design against it.</p>
+
+      <h3>References</h3>
+      <ul>
+        <li>HIPAA Security Rule — 45 CFR §164.308(a)(6), §164.404(b), §164.308(a)(7), §164.408</li>
+        <li>SOC 2 Trust Service Criteria (AICPA)</li>
+        <li>ISO/IEC 27001 Annex A control set</li>
+        <li>Anthropic Consumer Terms of Service and Privacy Policy</li>
+      </ul>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  Sai Kuruguntla · IWU AIML-501 Professional Portfolio
+</footer>
+
+</body>
+</html>
