@@ -1,0 +1,79 @@
+<svg viewBox="0 0 940 610" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="940" height="610" fill="#FAFAF8"/>
+
+  <text x="470" y="38" text-anchor="middle" font-size="21" font-weight="700" fill="#0d1b34">Three Ways a Model Scores Well and Knows Nothing</text>
+  <text x="470" y="60" text-anchor="middle" font-size="12.5" fill="#5b6472">Each of these failures shows up as a good metric. The check is what separates a trained model from a convincing one.</text>
+
+  <!-- Column headers -->
+  <text x="40" y="96" font-size="11" font-weight="700" fill="#2f5fd6" letter-spacing="0.08em">FAILURE MODE</text>
+  <text x="296" y="96" font-size="11" font-weight="700" fill="#b4472e" letter-spacing="0.08em">WHAT IT LOOKS LIKE IN SECURITY WORK</text>
+  <text x="620" y="96" font-size="11" font-weight="700" fill="#2f6b45" letter-spacing="0.08em">THE CHECK THAT CATCHES IT</text>
+  <line x1="40" y1="104" x2="900" y2="104" stroke="#c9cfda" stroke-width="1"/>
+
+  <!-- ROW 1 -->
+  <rect x="40" y="118" width="240" height="130" rx="8" fill="#eaf0ff" stroke="#2f5fd6" stroke-width="1.5"/>
+  <text x="58" y="146" font-size="13.5" font-weight="700" fill="#0d1b34">Overfitting</text>
+  <text x="58" y="170" font-size="11.5" fill="#5b6472">The model memorized the</text>
+  <text x="58" y="187" font-size="11.5" fill="#5b6472">examples instead of the</text>
+  <text x="58" y="204" font-size="11.5" fill="#5b6472">pattern behind them.</text>
+
+  <rect x="296" y="118" width="308" height="130" rx="8" fill="#fdeee9" stroke="#d1855f" stroke-width="1.2"/>
+  <text x="314" y="150" font-size="12" fill="#22303C">A detector tuned until it flags every</text>
+  <text x="314" y="168" font-size="12" fill="#22303C">sample from one campaign and nothing</text>
+  <text x="314" y="186" font-size="12" fill="#22303C">from the next one. The training numbers</text>
+  <text x="314" y="204" font-size="12" fill="#22303C">look excellent right up to the moment</text>
+  <text x="314" y="222" font-size="12" fill="#22303C">the adversary changes one thing.</text>
+
+  <rect x="620" y="118" width="280" height="130" rx="8" fill="#e7f2ea" stroke="#4A8F5C" stroke-width="1.2"/>
+  <text x="638" y="150" font-size="12" fill="#22303C">A held-out test set touched once,</text>
+  <text x="638" y="168" font-size="12" fill="#22303C">at the end. Every additional look</text>
+  <text x="638" y="186" font-size="12" fill="#22303C">leaks it into the design decisions</text>
+  <text x="638" y="204" font-size="12" fill="#22303C">and quietly turns it into a second</text>
+  <text x="638" y="222" font-size="12" fill="#22303C">validation set.</text>
+
+  <!-- ROW 2 -->
+  <rect x="40" y="262" width="240" height="130" rx="8" fill="#eaf0ff" stroke="#2f5fd6" stroke-width="1.5"/>
+  <text x="58" y="290" font-size="13.5" font-weight="700" fill="#0d1b34">Validation leakage</text>
+  <text x="58" y="314" font-size="11.5" fill="#5b6472">The held-out score is</text>
+  <text x="58" y="331" font-size="11.5" fill="#5b6472">high and the system</text>
+  <text x="58" y="348" font-size="11.5" fill="#5b6472">still fails in production.</text>
+
+  <rect x="296" y="262" width="308" height="130" rx="8" fill="#fdeee9" stroke="#d1855f" stroke-width="1.2"/>
+  <text x="314" y="294" font-size="12" fill="#22303C">Splitting captured traffic packet by</text>
+  <text x="314" y="312" font-size="12" fill="#22303C">packet rather than by session, so</text>
+  <text x="314" y="330" font-size="12" fill="#22303C">fragments of the same incident land on</text>
+  <text x="314" y="348" font-size="12" fill="#22303C">both sides of the split — or a feature</text>
+  <text x="314" y="366" font-size="12" fill="#22303C">only populated after triage closed.</text>
+
+  <rect x="620" y="262" width="280" height="130" rx="8" fill="#e7f2ea" stroke="#4A8F5C" stroke-width="1.2"/>
+  <text x="638" y="294" font-size="12" fill="#22303C">Split by entity and by time, never</text>
+  <text x="638" y="312" font-size="12" fill="#22303C">by row. For every feature, ask what</text>
+  <text x="638" y="330" font-size="12" fill="#22303C">it contained before the event rather</text>
+  <text x="638" y="348" font-size="12" fill="#22303C">than after it — enrichment fields are</text>
+  <text x="638" y="366" font-size="12" fill="#22303C">the usual culprit.</text>
+
+  <!-- ROW 3 -->
+  <rect x="40" y="406" width="240" height="130" rx="8" fill="#eaf0ff" stroke="#2f5fd6" stroke-width="1.5"/>
+  <text x="58" y="434" font-size="13.5" font-weight="700" fill="#0d1b34">Degenerate optimum</text>
+  <text x="58" y="458" font-size="11.5" fill="#5b6472">The loss is near zero</text>
+  <text x="58" y="475" font-size="11.5" fill="#5b6472">and the result carries</text>
+  <text x="58" y="492" font-size="11.5" fill="#5b6472">no information at all.</text>
+
+  <rect x="296" y="406" width="308" height="130" rx="8" fill="#fdeee9" stroke="#d1855f" stroke-width="1.2"/>
+  <text x="314" y="438" font-size="12" fill="#22303C">k-means with k set to the number of</text>
+  <text x="314" y="456" font-size="12" fill="#22303C">samples: one cluster per point, zero</text>
+  <text x="314" y="474" font-size="12" fill="#22303C">within-cluster variance, nothing</text>
+  <text x="314" y="492" font-size="12" fill="#22303C">learned. An autoencoder with a wide</text>
+  <text x="314" y="510" font-size="12" fill="#22303C">enough bottleneck simply copies input.</text>
+
+  <rect x="620" y="406" width="280" height="130" rx="8" fill="#e7f2ea" stroke="#4A8F5C" stroke-width="1.2"/>
+  <text x="638" y="438" font-size="12" fill="#22303C">Constrain from outside the objective</text>
+  <text x="638" y="456" font-size="12" fill="#22303C">— a bottleneck narrower than the</text>
+  <text x="638" y="474" font-size="12" fill="#22303C">input, a denoising task, or a</text>
+  <text x="638" y="492" font-size="12" fill="#22303C">selection criterion such as the elbow,</text>
+  <text x="638" y="510" font-size="12" fill="#22303C">silhouette score, or BIC.</text>
+
+  <!-- Footer band -->
+  <rect x="40" y="552" width="860" height="42" rx="8" fill="#0d1b34"/>
+  <text x="470" y="578" text-anchor="middle" font-size="12.5" fill="#dbe4f7">Common thread: all three produce a good number. Reviewing an ML system means asking what the number could be true of.</text>
+</svg>

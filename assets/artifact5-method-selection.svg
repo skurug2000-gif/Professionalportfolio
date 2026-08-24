@@ -1,0 +1,103 @@
+<svg viewBox="0 0 940 640" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="940" height="640" fill="#FAFAF8"/>
+
+  <text x="470" y="38" text-anchor="middle" font-size="21" font-weight="700" fill="#0d1b34">Which Training Method Does the Problem Actually Call For?</text>
+  <text x="470" y="60" text-anchor="middle" font-size="12.5" fill="#5b6472">One question decides it — and the condition that disqualifies each method matters more than the one that recommends it.</text>
+
+  <!-- Opening question -->
+  <rect x="180" y="80" width="580" height="46" rx="10" fill="#eaf0ff" stroke="#2f5fd6" stroke-width="1.6"/>
+  <text x="470" y="109" text-anchor="middle" font-size="14" font-weight="700" fill="#0d1b34">Start here: what kind of feedback does the environment give you?</text>
+
+  <!-- connectors -->
+  <path d="M470 126 L470 144 M180 144 L760 144 M180 144 L180 160 M470 144 L470 160 M760 144 L760 160" stroke="#9aa5b8" stroke-width="1.4" fill="none"/>
+  <path d="M180 160 l-5 -8 l10 0 z" fill="#9aa5b8"/>
+  <path d="M470 160 l-5 -8 l10 0 z" fill="#9aa5b8"/>
+  <path d="M760 160 l-5 -8 l10 0 z" fill="#9aa5b8"/>
+
+  <!-- ============ COLUMN A : SUPERVISED ============ -->
+  <rect x="40" y="160" width="280" height="44" rx="8" fill="#0d1b34"/>
+  <text x="180" y="188" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">SUPERVISED</text>
+  <rect x="40" y="204" width="280" height="330" rx="8" fill="#ffffff" stroke="#d9dee7" stroke-width="1.3"/>
+
+  <text x="58" y="228" font-size="10" font-weight="700" fill="#2f5fd6" letter-spacing="0.07em">FEEDBACK SIGNAL</text>
+  <text x="58" y="248" font-size="11.5" fill="#22303C">The correct answer is supplied</text>
+  <text x="58" y="264" font-size="11.5" fill="#22303C">with every example.</text>
+  <line x1="58" y1="278" x2="302" y2="278" stroke="#eceff4" stroke-width="1"/>
+
+  <text x="58" y="298" font-size="10" font-weight="700" fill="#2f5fd6" letter-spacing="0.07em">SECURITY EXAMPLE</text>
+  <text x="58" y="318" font-size="11.5" fill="#22303C">Labeling documents PHI or</text>
+  <text x="58" y="334" font-size="11.5" fill="#22303C">Non-PHI so access controls can</text>
+  <text x="58" y="350" font-size="11.5" fill="#22303C">be applied automatically.</text>
+  <line x1="58" y1="364" x2="302" y2="364" stroke="#eceff4" stroke-width="1"/>
+
+  <text x="58" y="384" font-size="10" font-weight="700" fill="#2f5fd6" letter-spacing="0.07em">WHAT THE DATA MUST BE</text>
+  <text x="58" y="404" font-size="11.5" fill="#22303C">A labeled corpus whose ground</text>
+  <text x="58" y="420" font-size="11.5" fill="#22303C">truth more than one person</text>
+  <text x="58" y="436" font-size="11.5" fill="#22303C">independently agrees on.</text>
+  <line x1="58" y1="450" x2="302" y2="450" stroke="#eceff4" stroke-width="1"/>
+
+  <text x="58" y="470" font-size="10" font-weight="700" fill="#b4472e" letter-spacing="0.07em">DISQUALIFIED WHEN</text>
+  <text x="58" y="490" font-size="11.5" fill="#22303C">No one can produce consistent</text>
+  <text x="58" y="506" font-size="11.5" fill="#22303C">labels, or the labels encode a</text>
+  <text x="58" y="522" font-size="11.5" fill="#22303C">single reviewer's judgment.</text>
+
+  <!-- ============ COLUMN B : UNSUPERVISED ============ -->
+  <rect x="330" y="160" width="280" height="44" rx="8" fill="#0d1b34"/>
+  <text x="470" y="188" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">UNSUPERVISED</text>
+  <rect x="330" y="204" width="280" height="330" rx="8" fill="#ffffff" stroke="#d9dee7" stroke-width="1.3"/>
+
+  <text x="348" y="228" font-size="10" font-weight="700" fill="#2f5fd6" letter-spacing="0.07em">FEEDBACK SIGNAL</text>
+  <text x="348" y="248" font-size="11.5" fill="#22303C">None. Structure in the data is</text>
+  <text x="348" y="264" font-size="11.5" fill="#22303C">the only thing to learn from.</text>
+  <line x1="348" y1="278" x2="592" y2="278" stroke="#eceff4" stroke-width="1"/>
+
+  <text x="348" y="298" font-size="10" font-weight="700" fill="#2f5fd6" letter-spacing="0.07em">SECURITY EXAMPLE</text>
+  <text x="348" y="318" font-size="11.5" fill="#22303C">Baselining authentication and</text>
+  <text x="348" y="334" font-size="11.5" fill="#22303C">flow behavior to surface accounts</text>
+  <text x="348" y="350" font-size="11.5" fill="#22303C">that stop resembling themselves.</text>
+  <line x1="348" y1="364" x2="592" y2="364" stroke="#eceff4" stroke-width="1"/>
+
+  <text x="348" y="384" font-size="10" font-weight="700" fill="#2f5fd6" letter-spacing="0.07em">WHAT THE DATA MUST BE</text>
+  <text x="348" y="404" font-size="11.5" fill="#22303C">Enough volume, and a notion of</text>
+  <text x="348" y="420" font-size="11.5" fill="#22303C">normal not already contaminated</text>
+  <text x="348" y="436" font-size="11.5" fill="#22303C">by the thing you are hunting.</text>
+  <line x1="348" y1="450" x2="592" y2="450" stroke="#eceff4" stroke-width="1"/>
+
+  <text x="348" y="470" font-size="10" font-weight="700" fill="#b4472e" letter-spacing="0.07em">DISQUALIFIED WHEN</text>
+  <text x="348" y="490" font-size="11.5" fill="#22303C">You have to defend one specific</text>
+  <text x="348" y="506" font-size="11.5" fill="#22303C">finding. It can mark a point</text>
+  <text x="348" y="522" font-size="11.5" fill="#22303C">unusual; it cannot say why.</text>
+
+  <!-- ============ COLUMN C : REINFORCEMENT ============ -->
+  <rect x="620" y="160" width="280" height="44" rx="8" fill="#0d1b34"/>
+  <text x="760" y="188" text-anchor="middle" font-size="14.5" font-weight="700" fill="#ffffff">REINFORCEMENT</text>
+  <rect x="620" y="204" width="280" height="330" rx="8" fill="#ffffff" stroke="#d9dee7" stroke-width="1.3"/>
+
+  <text x="638" y="228" font-size="10" font-weight="700" fill="#2f5fd6" letter-spacing="0.07em">FEEDBACK SIGNAL</text>
+  <text x="638" y="248" font-size="11.5" fill="#22303C">Delayed and cumulative — scored</text>
+  <text x="638" y="264" font-size="11.5" fill="#22303C">on the sequence, not the step.</text>
+  <line x1="638" y1="278" x2="882" y2="278" stroke="#eceff4" stroke-width="1"/>
+
+  <text x="638" y="298" font-size="10" font-weight="700" fill="#2f5fd6" letter-spacing="0.07em">SECURITY EXAMPLE</text>
+  <text x="638" y="318" font-size="11.5" fill="#22303C">Learning a containment policy —</text>
+  <text x="638" y="334" font-size="11.5" fill="#22303C">isolate, throttle, or wait —</text>
+  <text x="638" y="350" font-size="11.5" fill="#22303C">across a multi-step intrusion.</text>
+  <line x1="638" y1="364" x2="882" y2="364" stroke="#eceff4" stroke-width="1"/>
+
+  <text x="638" y="384" font-size="10" font-weight="700" fill="#2f5fd6" letter-spacing="0.07em">WHAT THE DATA MUST BE</text>
+  <text x="638" y="404" font-size="11.5" fill="#22303C">An environment safe to fail in,</text>
+  <text x="638" y="420" font-size="11.5" fill="#22303C">and a reward that reflects the</text>
+  <text x="638" y="436" font-size="11.5" fill="#22303C">real cost of being wrong.</text>
+  <line x1="638" y1="450" x2="882" y2="450" stroke="#eceff4" stroke-width="1"/>
+
+  <text x="638" y="470" font-size="10" font-weight="700" fill="#b4472e" letter-spacing="0.07em">DISQUALIFIED WHEN</text>
+  <text x="638" y="490" font-size="11.5" fill="#22303C">It cannot be simulated, and</text>
+  <text x="638" y="506" font-size="11.5" fill="#22303C">production is the only</text>
+  <text x="638" y="522" font-size="11.5" fill="#22303C">environment you have.</text>
+
+  <!-- Bottom band -->
+  <rect x="40" y="552" width="860" height="68" rx="8" fill="#fdeee9" stroke="#d1855f" stroke-width="1.2"/>
+  <text x="60" y="576" font-size="10.5" font-weight="700" fill="#b4472e" letter-spacing="0.07em">THE CREDIT-ASSIGNMENT PROBLEM</text>
+  <text x="60" y="596" font-size="12" fill="#22303C">Reward arrives at the end of the chain, so the agent has to infer which of many earlier actions earned it. In incident</text>
+  <text x="60" y="612" font-size="12" fill="#22303C">response, attributing it to the wrong action does not just slow learning — it trains the wrong reflex.</text>
+</svg>
